@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+  </title>
+</head>
+
+<body>
+  <form>
+    Text:<br>
+    <input type="text" id="msg" onchange="addEventListener('change',myFunction2())"><br>
+    <br>
+    <input type="button" value="clickMe" onclick="myFunction()">
+    <h1 id="text1"></h1>
+
+  </form>
+
+  <script type="text/javascript">
+    /*
+      gets the value from textbox and alert to the user
+      */
+    function myFunction() {
+      var msg = document.getElementById('msg').value; // getting value from textbox
+      alert(msg);
+    }
+    /*
+  changes the h1 line to the value of the textbox 
+  */
+    function myFunction2() {
+      var text = document.getElementById('msg').value;
+      document.getElementById('text1').innerHTML = text; // changeing h1 line to the value of the textbox
+    }
+  </script>
+
+</body>
+
+</html>
